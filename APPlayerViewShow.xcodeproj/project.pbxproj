@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		3986ECD72BF0CDF1001FCE11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECD62BF0CDF1001FCE11 /* AppDelegate.swift */; };
-		3986ECD92BF0CDF1001FCE11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECD82BF0CDF1001FCE11 /* SceneDelegate.swift */; };
 		3986ECDB2BF0CDF1001FCE11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECDA2BF0CDF1001FCE11 /* ViewController.swift */; };
 		3986ECDE2BF0CDF1001FCE11 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3986ECDD2BF0CDF1001FCE11 /* Base */; };
 		3986ECE02BF0CDF2001FCE11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3986ECDF2BF0CDF2001FCE11 /* Assets.xcassets */; };
 		3986ECE32BF0CDF2001FCE11 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3986ECE22BF0CDF2001FCE11 /* Base */; };
+		3986ECEE2BF0CE77001FCE11 /* APPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECEA2BF0CE76001FCE11 /* APPlayerModel.swift */; };
+		3986ECEF2BF0CE77001FCE11 /* APPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECEB2BF0CE76001FCE11 /* APPlayerView.swift */; };
+		3986ECF02BF0CE77001FCE11 /* APVideoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECEC2BF0CE76001FCE11 /* APVideoResource.swift */; };
+		3986ECF12BF0CE77001FCE11 /* APVideoSliderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECED2BF0CE77001FCE11 /* APVideoSliderLayer.swift */; };
+		3986ECF32BF0CE97001FCE11 /* MoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECF22BF0CE97001FCE11 /* MoreExtension.swift */; };
+		3986ECF52BF0D018001FCE11 /* APVideoSpeedUpLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECF42BF0D018001FCE11 /* APVideoSpeedUpLayer.swift */; };
+		3986ECF72BF102A2001FCE11 /* PrintFormatProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986ECF62BF102A2001FCE11 /* PrintFormatProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3986ECD32BF0CDF1001FCE11 /* APPlayerViewShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPlayerViewShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3986ECD62BF0CDF1001FCE11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3986ECD82BF0CDF1001FCE11 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3986ECDA2BF0CDF1001FCE11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3986ECDD2BF0CDF1001FCE11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3986ECDF2BF0CDF2001FCE11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3986ECE22BF0CDF2001FCE11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3986ECE42BF0CDF2001FCE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3986ECEA2BF0CE76001FCE11 /* APPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPlayerModel.swift; sourceTree = "<group>"; };
+		3986ECEB2BF0CE76001FCE11 /* APPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPlayerView.swift; sourceTree = "<group>"; };
+		3986ECEC2BF0CE76001FCE11 /* APVideoResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APVideoResource.swift; sourceTree = "<group>"; };
+		3986ECED2BF0CE77001FCE11 /* APVideoSliderLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APVideoSliderLayer.swift; sourceTree = "<group>"; };
+		3986ECF22BF0CE97001FCE11 /* MoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreExtension.swift; sourceTree = "<group>"; };
+		3986ECF42BF0D018001FCE11 /* APVideoSpeedUpLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APVideoSpeedUpLayer.swift; sourceTree = "<group>"; };
+		3986ECF62BF102A2001FCE11 /* PrintFormatProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintFormatProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				3986ECD62BF0CDF1001FCE11 /* AppDelegate.swift */,
-				3986ECD82BF0CDF1001FCE11 /* SceneDelegate.swift */,
 				3986ECDA2BF0CDF1001FCE11 /* ViewController.swift */,
+				3986ECEA2BF0CE76001FCE11 /* APPlayerModel.swift */,
+				3986ECEB2BF0CE76001FCE11 /* APPlayerView.swift */,
+				3986ECEC2BF0CE76001FCE11 /* APVideoResource.swift */,
+				3986ECED2BF0CE77001FCE11 /* APVideoSliderLayer.swift */,
+				3986ECF42BF0D018001FCE11 /* APVideoSpeedUpLayer.swift */,
 				3986ECDC2BF0CDF1001FCE11 /* Main.storyboard */,
 				3986ECDF2BF0CDF2001FCE11 /* Assets.xcassets */,
 				3986ECE12BF0CDF2001FCE11 /* LaunchScreen.storyboard */,
 				3986ECE42BF0CDF2001FCE11 /* Info.plist */,
+				3986ECF22BF0CE97001FCE11 /* MoreExtension.swift */,
+				3986ECF62BF102A2001FCE11 /* PrintFormatProtocol.swift */,
 			);
 			path = APPlayerViewShow;
 			sourceTree = "<group>";
@@ -139,8 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3986ECDB2BF0CDF1001FCE11 /* ViewController.swift in Sources */,
+				3986ECF32BF0CE97001FCE11 /* MoreExtension.swift in Sources */,
+				3986ECF02BF0CE77001FCE11 /* APVideoResource.swift in Sources */,
+				3986ECEE2BF0CE77001FCE11 /* APPlayerModel.swift in Sources */,
+				3986ECF12BF0CE77001FCE11 /* APVideoSliderLayer.swift in Sources */,
+				3986ECF52BF0D018001FCE11 /* APVideoSpeedUpLayer.swift in Sources */,
+				3986ECEF2BF0CE77001FCE11 /* APPlayerView.swift in Sources */,
 				3986ECD72BF0CDF1001FCE11 /* AppDelegate.swift in Sources */,
-				3986ECD92BF0CDF1001FCE11 /* SceneDelegate.swift in Sources */,
+				3986ECF72BF102A2001FCE11 /* PrintFormatProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -297,9 +321,9 @@
 				INFOPLIST_FILE = APPlayerViewShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +331,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HowardExplore.APPlayerViewShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,9 +351,9 @@
 				INFOPLIST_FILE = APPlayerViewShow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +361,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HowardExplore.APPlayerViewShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
