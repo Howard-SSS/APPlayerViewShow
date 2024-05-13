@@ -59,39 +59,7 @@ open class APPlayerView: UIView, PrintFormatProtocol {
     // MARK: - 属性
     var model: APPlayerModel?
 
-    var isFullScreen: Bool = false {
-        didSet {
-            if isFullScreen {
-                guard let keyWindown = keyWindow else {
-                    return
-                }
-                
-                UIView.animate(withDuration: 0.5) {
-                    self.transform = CGAffineTransformRotate(self.transform, CGFloat.pi * 0.5)
-                    self.frame = .init(origin: .zero, size: .init(width: keyWindown.width, height: keyWindown.height))
-                } completion: { [weak self] _ in
-                    guard let self = self else {
-                        return
-                    }
-                    
-                    delegate?.apPlayer(playerView: self, orientDidChange: true)
-                    orientDicChange?(true)
-                }
-            } else {
-                UIView.animate(withDuration: 0.5) {
-                    self.transform = CGAffineTransformRotate(self.transform, -CGFloat.pi * 0.5)
-                    self.frame = self.basicFrame
-                } completion: { [weak self] _ in
-                    guard let self = self else {
-                        return
-                    }
-                    
-                    delegate?.apPlayer(playerView: self, orientDidChange: false)
-                    orientDicChange?(false)
-                }
-            }
-        }
-    }
+    var isFullScreen: Bool = false
     
     var basicFrame: CGRect
     
@@ -222,30 +190,24 @@ open class APPlayerView: UIView, PrintFormatProtocol {
         didSet {
             model?.playerLayer.frame = bounds
             handleView.frame = bounds
-            if isFullScreen {
-                topHandleView.frame = .init(x: 0, y: 0, width: height, height: 50)
-                middleHandleView.frame = .init(x: 0, y: topHandleView.maxY, width: height, height: bottomHandleView.minY - topHandleView.maxY)
-                bottomHandleView.frame = .init(x: 0, y: width - 50, width: height, height: 50)
-            } else {
-                topHandleView.frame = .init(x: 0, y: 0, width: width, height: 50)
-                middleHandleView.frame = .init(x: 0, y: topHandleView.maxY, width: width, height: bottomHandleView.minY - topHandleView.maxY)
-                bottomHandleView.frame = .init(x: 0, y: height - 50, width: width, height: 50)
-            }
+            topHandleView.frame = .init(x: 0, y: 0, width: width, height: 50)
+            middleHandleView.frame = .init(x: 0, y: topHandleView.maxY, width: width, height: bottomHandleView.minY - topHandleView.maxY)
+            bottomHandleView.frame = .init(x: 0, y: height - 50, width: width, height: 50)
             backBtn.frame = .init(x: 10, y: (topHandleView.height - 30) * 0.5, width: 30, height: 30)
             videoNameLab.frame = .init(x: backBtn.maxX, y: 0, width: 200, height: topHandleView.height)
             
             playBtn.frame = .init(x: 10, y: (bottomHandleView.height - 50) * 0.5, width: 50, height: 50)
             playTimeHintLab.frame = .init(x: playBtn.maxX + 10, y: 0, width: 50, height: bottomHandleView.height)
-            slider.frame = .init(x: playTimeHintLab.maxX + 10, y: (bottomHandleView.height - 30) * 0.5, width: unplayTimeHintLab.minX - playTimeHintLab.maxX - 10, height: 30)
-            unplayTimeHintLab.frame = .init(x: zoomBtn.minX - 10 - 50, y: 0, width: 50, height: bottomHandleView.height)
             zoomBtn.frame = .init(x: bottomHandleView.width - 10 - 30, y: (bottomHandleView.height - 30) * 0.5, width: 30, height: 30)
+            unplayTimeHintLab.frame = .init(x: zoomBtn.minX - 10 - 50, y: 0, width: 50, height: bottomHandleView.height)
+            slider.frame = .init(x: playTimeHintLab.maxX + 10, y: (bottomHandleView.height - 30) * 0.5, width: unplayTimeHintLab.minX - playTimeHintLab.maxX - 10, height: 30)
         }
     }
     
     override init(frame: CGRect) {
         basicFrame = frame
         super.init(frame: frame)
-        backgroundColor = .black
+        backgroundColor = .red
         configUI()
     }
     
@@ -278,8 +240,12 @@ open class APPlayerView: UIView, PrintFormatProtocol {
     
     // MARK: - target
     @objc func touchBackBtn() {
-        delegate?.apPlayer(playerView: self, backAction: isFullScreen)
-        backAction?(isFullScreen)
+        if isFullScreen {
+            touchZoomBtn()
+        } else {
+            delegate?.apPlayer(playerView: self, backAction: isFullScreen)
+            backAction?(isFullScreen)
+        }
     }
     
     @objc func touchPlayBtn() {
@@ -310,6 +276,18 @@ open class APPlayerView: UIView, PrintFormatProtocol {
         weak var weakSelf = self
         guard let self = weakSelf else {
             return
+        }
+        
+        delegate?.apPlayer(playerView: self, orientDidChange: isFullScreen)
+        orientDicChange?(isFullScreen)
+        
+        if isFullScreen {
+            guard let keyWindown = keyWindow else {
+                return
+            }
+            frame = .init(origin: .zero, size: .init(width: keyWindown.height, height: keyWindown.width))
+        } else {
+            frame = basicFrame
         }
     }
     

@@ -11,6 +11,17 @@ class ViewController: UIViewController {
 
     var isFullScene: Bool = false {
         didSet {
+            if #available(iOS 16.0, *) {
+                self.setNeedsUpdateOfSupportedInterfaceOrientations()
+                self.navigationController?.setNeedsUpdateOfSupportedInterfaceOrientations()
+                let scene = UIApplication.shared.connectedScenes.first as! UIWindowScene
+                let geometry = UIWindowScene.GeometryPreferences.iOS(interfaceOrientations: isFullScene ? .landscapeRight : .portrait)
+                scene.requestGeometryUpdate(geometry) { error in
+                    print(error)
+                }
+            } else {
+                UIDevice.current.setValue(isFullScene ? UIInterfaceOrientation.landscapeRight : UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            }
         }
     }
     
@@ -25,10 +36,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(videoView)
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
-        
     }
 }
 

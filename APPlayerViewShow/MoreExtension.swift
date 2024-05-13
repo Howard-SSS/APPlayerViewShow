@@ -18,7 +18,7 @@ extension UIView {
             frame = .init(x: minX, y: minY, width: newValue, height: height)
         }
         get {
-            CGRectGetWidth(frame)
+            frame.width
         }
     }
     
@@ -27,7 +27,7 @@ extension UIView {
             frame = .init(x: minX, y: minY, width: width, height: newValue)
         }
         get {
-            CGRectGetHeight(frame)
+            frame.height
         }
     }
     
@@ -36,7 +36,7 @@ extension UIView {
             frame = .init(x: newValue, y: minY, width: width, height: height)
         }
         get {
-            CGRectGetMinX(frame)
+            frame.minX
         }
     }
     
@@ -45,16 +45,16 @@ extension UIView {
             frame = .init(x: minX, y: newValue, width: width, height: height)
         }
         get {
-            CGRectGetMinY(frame)
+            frame.minY
         }
     }
     
     var maxX: CGFloat {
-        CGRectGetMaxX(frame)
+        frame.maxX
     }
     
     var maxY: CGFloat {
-        CGRectGetMaxY(frame)
+        frame.maxY
     }
 }
 
